@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="catalogo.css">
+</head>
+<body>
+  <header class="banner-navegacion">
+    <div class="proyect"><img src="kanna3.png" class="proyect"  alt="proyecto1" /></div>
+    <nav class="navegacion">
+     <ul>
+      <li><button id="btnCarritoNav"> 🛒 Ver Carrito <span id="contadorCarrito">0</span></button></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Contáctanos</a></li>
+      <li><a href="index.html">Portada</a></li>
+     </ul>
+    </nav>
+ </header>
+
+ <div class="contenedor-textos">
+   <div id="texto1" class="visible">
+    <p>Descuentos desde 40% en prendas seleccionadas</p>
+  </div>
+  <div id="texto2" class="oculto">
+    <p>Envio gratis en tu primera compra</p>
+  </div>
+  </div>
+
+  <div class="filtros">
+    <label> Categoría:
+      <select id="filtroCategoria">
+        <option value="todas">Todas</option>
+        <option value="bebe">Bebé</option>
+        <option value="niños">Niños</option>
+        <option value="niñas">Niñas</option>
+      </select>
+    </label>
+  
+    <label> Prenda:
+      <select id="filtroPrenda">
+        <option value="todas">Todas</option>
+        <option value="camiseta">Camiseta</option>
+        <option value="pantalon">Pantalón</option>
+        <option value="vestido">Vestido</option>
+        <option value="conjuntos">Conjuntos</option>
+        <option value="enterizos">Enterizos</option>
+      </select>
+    </label>
+  
+    <label>  Precio máximo:
+        <input type="number" id="filtroPrecio" placeholder="Ej: 50000">
+    </label>
+  
+    <label>  Ordenar por:
+      <select id="ordenarPrecio">
+        <option value="ninguno">Sin orden</option>
+        <option value="asc">Precio: menor a mayor</option>
+        <option value="desc">Precio: mayor a menor</option>
+      </select>
+    </label>
+  </div>
+  
+  <div id="carritoModal" class="modal">
+    <div class="modal-content">
+      <span class="cerrar" id="cerrarModal">&times;</span>
+      <h2>Mi Carrito</h2>
+      <div id="carritoContenido"></div>
+      <p id="totalPrecio">Total: $0</p>
+      <button id="vaciarCarrito">Vaciar Carrito</button>
+    </div>
+  </div>
+  
+<div class="tarjetas-container">
+    <div class="classflex">
+      <div class="card" data-id="1" data-precio="35000" data-categoria="niños" data-prenda="conjuntos">
+        <img src="p1.jpg" alt="Producto 1">
+        <h5 class="card-title">Conjunto A</h5>
+        <p class="card-text">Prenda fresca para un día aventurero</p>
+        <p>$35.000</p>
+         <button class="agregar-carrito" data-id="1" data-nombre="Conjunto A" data-precio="35000" data-imagen="p1.jpg">
+            Agregar al carrito
+          </button>
+          
+      </div>
+    </div>
+  
+  <div class="classflex">
+    <div class="card" data-id="2" data-precio="38000" data-categoria="niños" data-prenda="conjuntos">
+      <img src="p2.jpg" alt="Producto 2">
+      <h5 class="card-title">Conjunto B</h5>
+      <p class="card-text">Ideal para jugar y estar cómodo</p>
+      <p>$38.000</p>
+      <button class="agregar-carrito" data-id="2" data-nombre="Conjunto B" data-precio="38000" data-imagen="p2.jpg">
+        Agregar al carrito
+      </button>
+      </div>
+    </div>
+  </div>
+  
+
+  <footer class="footer">
+   <div class="footer-content">
+     <div class="footer-links">
+       <h3>Sobre la Marca</h3>
+       <a href="#">Inicio</a>
+       <a href="#">Acerca de Nosotros</a>
+       <a href="#">Responsabilidad Social</a>
+       <a href="#">Política de privacidad</a>
+     </div>
+     <div class="footer-social">
+       <h2>Siguenos</h2>
+       <a href="https://facebook.com" target="_blank">Facebook
+         <i class="fab fa-facebook-f"></i>
+       </a>
+       <a href="https://instagram.com" target="_blank">instagram
+         <i class="fab fa-instagram"></i>
+       </a>
+       <a href="https://tiktok.com" target="_blank">tiktok
+       </a>
+     </div>
+     <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+    </div>
+ 
+    <section id="contact">
+      <h3>CONTÁCTANOS</h3>
+      <form id="miformulario" action="/submit" method="post" onsubmit="vaciar.call(this);returmfalse;">
+        <label for="name">nombre:</label>
+        <input type="text" id="name" name="name" required /><br />
+        <label for="email">correo electronico:</label>
+        <input type="email" id="email" name="email" required /><br />
+        <label for="message">mensaje</label>
+        <textarea name="message" id="message" required></textarea><br />
+        <input type="submit" value="enviar" />
+      </form>
+    </section>
+</footer>
+
+  
+  <script src="catalogo.js"></script>
+  <script src="micarrito.js"></script>
+</body>
+</html>

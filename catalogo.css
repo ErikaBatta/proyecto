@@ -1,0 +1,358 @@
+/* espacio para la pagina */
+body {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+  /* espacio de estilos para el banner de navegacion */
+  
+  .banner-navegacion {
+      top: 0;
+      width: 100%;
+      background-color: rgb(253, 252, 252);
+      position: fixed;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      /* box-shadow: 0px 10px 25px 4px rgba(245, 171, 245, 0.719) */
+  }
+  
+  .navegacion ul {
+    list-style: none;
+    display: flex;               /* Usamos flexbox para alinear horizontalmente */
+    justify-content: center;     /* Centrar los elementos horizontalmente */
+    text-align: center;
+  }
+  
+  .navegacion ul li {
+    margin: 0 10px;              /* Espaciado entre los elementos */
+    display: inline;
+  }
+  
+  .navegacion ul li a {
+    color: #030303cc;              /* Color de texto */
+    font-family:  "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode";
+    text-decoration: none;       /* Eliminar subrayado */
+    font-size: 16px;
+    padding: 10px 15px;          /* Espaciado interno para los enlaces */
+    transition: background-color 0.4s ease; /* Transición suave en el fondo */
+  }
+  
+  .navegacion ul li a:hover {
+    background-color: #efa4efab;   /* Fondo oscuro al pasar el mouse */
+    border-radius: 10px;           /* Bordes redondeados */
+  }
+
+  #btnCarritoNav {
+    color: #0e0d0dcc;            
+    font-family:  "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode";
+    text-decoration: none;
+    border: none;      
+    font-size: 14px;
+    padding: 5px 10px;         
+    transition: background-color 0.4s ease;
+  }
+
+  #btnCarritoNav:hover{
+    background-color:  #efa4efab;
+    border-radius: 10px;  
+  }
+  
+  /* Estilos para imagen logo */
+  
+  .proyect {  
+    width: 250px;
+    height: 60px; /* en auto mantiene la proporción de la imagen */
+    /* opacity: 0.5; define la opacidad de la imagen */
+  }
+/* finaliza estilos banner de navegacion */
+
+/* contenido de texto inicial */
+.contenedor-textos {
+  position: relative;
+  height: 50px;
+  margin-top: 40px;
+  background-color: #bb5f85de;
+}
+
+#texto1,
+#texto2 {
+  display: flex;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  transition: opacity 1s ease;
+  position: absolute;
+  color: #fffefe;
+}
+
+#texto1{ margin-left: 30%;}
+#texto2{margin-left: 35%;}
+
+.visible {
+  opacity: 1;
+}
+
+.oculto {
+  opacity: 0;
+}
+
+/* Estilos filtros */
+
+
+/* Filtros */
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #ffffff;
+  padding: 8px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.filtros label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  min-width: 150px;
+}
+
+.filtros select,
+.filtros input[type="number"] {
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Tarjetas de producto */
+.tarjetas-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.classflex {
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.card-title {
+  font-size: 1.2em;
+  margin: 10px 0 5px;
+}
+
+.card-text {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.agregar-carrito {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.agregar-carrito:hover {
+  background-color: #218838;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.cerrar {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+  color: black;
+}
+
+#vaciarCarrito {
+  background-color: #dc3545;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#vaciarCarrito:hover {
+  background-color: #c82333;
+}
+
+
+/* pie de pagina */
+
+.footer {
+    background-color: #f4f0f0;
+    padding: 30px 40px;
+    text-align: center;
+    font-size: 16px;
+    color: #2b2929;
+    border-top: 1px solid #c7c6c6;
+  }
+  
+  .footer-content {
+    /* max-width: 900px; */
+    margin-left: 45%;
+    justify-content: space-between;
+    align-items: right;
+    flex-wrap: wrap;
+    
+  }
+  
+  .footer-links,
+  .footer-social {
+    padding-top: 0;
+    margin-top: 0;
+  }
+  
+  .footer-links a,
+  .footer-social a {
+    margin: 0 10px;
+    color: #444;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-links a:hover,
+  .footer-social a:hover {
+    color: #c144b2;
+  }
+  
+  @media (max-width: 600px) {
+    .footer-links,
+    .footer-social {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .footer-links a,
+    .footer-social a {
+      margin: 5px 0;
+    }
+  }
+  
+  
+  #contact {
+    padding: 0px;
+    margin-top: -250px;
+    margin-left: 60px;
+    padding-top: 0;
+    background-color: #f9f7f7;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    max-width: 400px;
+    height: 50%;
+  }
+  
+  form label {
+    margin-bottom: 5px;
+    display: inline;
+    color: #555;
+  }
+  
+  form input,
+  form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+  }
+  
+  form input[type="submit"] {
+    margin: 10px;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(247, 177, 232);
+    color: rgb(7, 7, 7);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 3s ease;
+  }
+  form input[type="submit"]:hover {
+    background-color: #f974f9fd; 
+    color: #010101;
+  }
+  
+  h3 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #434343;
+  }

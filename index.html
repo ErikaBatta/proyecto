@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+   />
+</head>
+<body>
+   <!--aqui encabezado informacion comercial, logo y navegador fijo-->
+   <header class="banner-navegacion">
+    <div class="proyect"><img src="kanna3.png" class="proyect"  alt="proyecto1" /></div>
+    <nav class="navegacion">
+     <ul>
+      <li><a href="catalogo.html">Coleccion</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="#contact">Contáctanos</a></li>
+      <li><a href="index.html">Inicio</a></li>
+     </ul>
+    </nav>
+ </header>
+
+ <div class="banner">
+  <div class="slides">
+    <div class="slide">
+      <img src="baner.png" alt="Publicidad 1">
+      <a href="catalogo.html" class="banner-link">Ver Catalogo</a>
+    </div>
+    <div class="slide">
+      <img src="baner5.png" alt="Publicidad 2">
+    </div>
+    <div class="slide">
+      <img src="baner1.png" alt="Publicidad 3">
+      <a href="catalogo.html" class="banner-link2">Ver Colección</a>
+    </div>
+    <div class="slide">
+      <img src="baner2.png" alt="Publicidad 4">
+      <a href="blog.html" class="banner-link1">Ir al Blog</a>
+    </div>
+  </div>
+
+  <button class="prev">&#10094;</button>
+  <button class="next">&#10095;</button>
+</div>
+
+<!--aqui informacion de tendencias y de la marca-->
+
+  <section id="about">
+      <h2>¡Explora nuestra coleccion en tendencia y haz que tu pequeño luzca genial!</h2>
+      <p>
+        Descubre nuevos diseños para esta temporada primavera-verano, donde combina 
+        colores vibrantes con looks frescos, divertidos y modernos, todo lo que necesitas 
+        para vestir a tus hijos con estilo y comodidad..
+      </p>
+  </section>
+
+<!--aqui imagenes del portafolio-->
+
+<section id= "gallery2">
+  <div class="slider">
+    <div class="slide-track">
+      <img src="moda_1.jpg" class="slide1" alt="proyecto2" />
+      <img src="moda_2.jpg" class="slide1" alt="proyecto2"/>
+      <img src="moda 3.jpg" class="slide1" alt="proyecto2"/>
+      <img src="moda_4.jpg" class="slide1" alt="proyecto2"/>
+      <img src="moda_5.jpg" class="slide1" alt="proyecto2"/>
+    </div>
+  </div>
+</section> 
+<nav class="navegacion2">
+<a href="catalogo.html">Ver Coleccion</a>
+</nav>
+
+<!-- breve introduccion al blog -->
+
+<div class="blog-container">
+  <div class="blog-post">
+    <img src="blog.jpg" alt="Imagen del Blog">
+    <div class="blog-content">
+      <h2>Descubre las tendencias primavera-verano 2025</h2>
+      <p>Sabemos que amas vestir con ternura y elegancia a los mas pequeños de la casa, Descubre
+        las tendencias que trae esta primera temporada del año para la moda infantil y como la
+        puedes adaptar al dia a dia de los niños, para que siempre esten comodos.
+      </p>
+      <a href="blog.html">Leer más</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- seccion para contacto y finaliza la pagina -->
+
+<footer class="footer">
+
+ <div class="footer-content">
+  <div class="footer-links">
+    <h3>Sobre la Marca</h3>
+    <a href="#">Inicio</a>
+    <a href="#nosotros">Acerca de Nosotros</a>
+    <a href="#sostenibilidad">Sostenibilidad</a>
+    <a href="#politicaprivacidad">Política de privacidad</a>
+  </div>
+  <div class="footer-social">
+    <h2>Siguenos</h2>
+    <a href="https://facebook.com" target="_blank">Facebook
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://instagram.com" target="_blank">instagram
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://tiktok.com" target="_blank">tiktok
+      <i class="fab fa-tiktok"></i>
+    </a>
+  </div>
+  <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+ </div>
+
+
+
+ <section id="contact">
+  <h3>CONTÁCTANOS</h3>
+  <form id="miformulario" action="/submit" method="post" onsubmit="vaciar.call(this);returmfalse;">
+    <label for="name">nombre:</label>
+    <input type="text" id="name" name="name" required /><br />
+    <label for="email">correo electronico:</label>
+    <input type="email" id="email" name="email" required /><br />
+    <label for="message">mensaje</label>
+    <textarea name="message" id="message" required></textarea><br />
+    <input type="submit" value="enviar" />
+  </form>
+</section>
+</footer>
+
+<script src="styles.js"></script>
+    
+  </body>
+</html>

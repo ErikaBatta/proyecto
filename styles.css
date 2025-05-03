@@ -1,0 +1,455 @@
+/* espacio para la pagina */
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+/* espacio de estilos para el banner de navegacion */
+
+.banner-navegacion {
+    top: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 15px 4px rgba(245, 171, 245, 0.637)
+}
+
+.navegacion ul {
+  list-style: none;
+  display: flex;               /* Usamos flexbox para alinear horizontalmente */
+  justify-content: center;     /* Centrar los elementos horizontalmente */
+  text-align: center;
+}
+
+.navegacion ul li {
+  margin: 0 10px;              /* Espaciado entre los elementos */
+  display: inline;
+}
+
+.navegacion ul li a {
+  color: #030303cc;              /* Color de texto */
+  font-family:  "Lucida Sans Regular", "Lucida Grande",
+  "Lucida Sans Unicode";
+  text-decoration: none;       /* Eliminar subrayado */
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 15px;          /* Espaciado interno para los enlaces */
+  transition: background-color 0.4s ease; /* Transición suave en el fondo */
+}
+
+.navegacion ul li a:hover {
+  background-color: #f86ef8f6;   /* Fondo oscuro al pasar el mouse */
+  border-radius: 10px;           /* Bordes redondeados */
+}
+
+/* finaliza estilos banner de navegacion */
+
+/* Estilos para imagen logo */
+
+.proyect {  
+  width: 250px;
+  height: 60px; /* en auto mantiene la proporción de la imagen */
+  /* opacity: 0.5; define la opacidad de la imagen */
+}
+
+/* Estilos baner publicitario*/
+
+.banner {
+  position: relative;
+  margin-top: 65px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  width: 500%; 
+  height: 90%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-link {
+  position: absolute;
+  display: inline;
+  top: 75%;
+  font-size: 1.2rem;
+  right: 72%;        
+  padding: 10px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #f3ecc1;
+  color: #090918;
+  transition: background 0.3s;
+  z-index: 5;
+}
+
+.banner-link:hover {
+  background: rgb(248, 250, 147);
+  color: #090918;
+}
+
+.banner-link1 {
+  position: absolute;
+  display: inline;
+  top: 85%;
+  font-size: 1.2rem;
+  right: 18%;        
+  padding: 5px 5px;
+  text-decoration: none;
+  font-size: 24px;
+  border-radius: 5px;
+  color: #f864f1;
+  transition: background 0.3s;
+  z-index: 5;
+}
+
+.banner-link1:hover {
+  color: #cb06fc;
+}
+
+.banner-link2 {
+  position: absolute;
+  display: inline;
+  top: 90%;
+  font-size: 1.2rem;
+  right: 48%;        
+  padding: 5px 5px;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #e6e5e091;
+  color: #090918;
+  transition: background 0.3s;
+  z-index: 5;
+}
+
+.banner-link2:hover {
+  background: #f3ecc1;
+  color: #090918;
+}
+
+button.prev { left: 10px; }
+button.next { right: 10px; }
+
+button.prev,
+button.next {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-40%);
+  border: none;
+  color: rgb(8, 8, 8);
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* finaliza Estilos banner */
+
+/* Estilos para titulos y parrafos, contenido de la pagina */
+
+#about h2 {
+  margin-top: 60px;
+  color: rgb(8, 8, 8);
+  text-align: center;
+  font-family: "Lucida Sans Regular", "Lucida Grande",
+  "Lucida Sans Unicode";
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #000000;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 30px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+/* Estilos para imagenes */
+
+.slider img {
+  display: flex;
+  margin-top: 0px;
+  width: 300px; /* Ajusta al 100% del contenedor */
+  height: auto; /* Mantiene la proporción */
+  border-radius: 10px; /* (opcional) Bordes redondeados */
+  object-fit: cover; /* (opcional) Ajusta la imagen sin deformarla */
+  box-shadow: 0px -5px 19px 5px  rgba(246, 198, 244, 0.705); 
+}
+
+
+.slider {
+  justify-content: flex-start;
+  width: 88%;               /* ancho visible (una imagen) */
+  overflow: hidden;           /* oculta lo que se desborda */
+  margin: 30px;
+  margin-left: 90px;
+}
+
+.slide-track {
+  display: flex;
+  width: max-content;
+  animation: slide 10s infinite;
+  gap: 30px; 
+  
+}
+
+/* Animación */
+@keyframes slide {
+  0%   { transform: translateX(0); }
+  30%  { transform: translateX(100px); }
+  70%  { transform: translateX(-400px); }
+  100% { transform: translateX(0); }
+}
+
+.navegacion2 a {
+  display: inline-block;
+  margin-left: 45%;
+  padding: 5px;
+  background-color: #320e2cab;
+  color: #f9f8f8;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius:10px;
+  transition: background-color 0.9s ease;
+}
+.navegacion2 a:hover {
+  background-color: #f681f6bd;   /* Fondo oscuro al pasar el mouse */
+}
+
+/* finaliza espacio para el contenido de la pagina */
+
+/* estilos introduccion al blog */
+.blog-container {
+  max-width: 90%;
+  height: 500px;
+  margin: 80px 80px;
+  margin-top: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  flex-direction: column; 
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.blog-container:hover {
+  transform: scale(1.01);
+}
+
+.blog-post {
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  background-color: rgba(253, 252, 252, 0.9);
+  border: 2px double #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 600px) {
+  .blog-post {
+    flex-direction: column;
+  }
+
+  .blog-post img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.blog-post img {
+  display: flex;
+  margin: 0px;
+  width: 28%;
+  height: auto;
+  box-shadow: 0 0px 60px 20px rgba(228, 198, 228, 0.482);
+  object-fit: cover;
+}
+
+.blog-content {
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+  color: #000000;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.blog-content h2 {
+  margin: 0px;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.blog-content p {
+  font-size: 17px;
+  color: #444;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.blog-content a {
+  display: inline-block;
+  margin: 10px;
+  color: #d23abe;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+/*espacio de estilos para contacto */
+
+
+.footer {
+  background-color: #f4f0f0;
+  padding: 30px 40px;
+  text-align: center;
+  font-size: 16px;
+  color: #2b2929;
+  border-top: 1px solid #c7c6c6;
+}
+
+.footer-content {
+  /* max-width: 900px; */
+  margin-left: 45%;
+  justify-content: space-between;
+  align-items: right;
+  flex-wrap: wrap;
+  
+}
+
+.footer-links,
+.footer-social {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.footer-links a,
+.footer-social a {
+  margin: 0 10px;
+  color: #444;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+  color: #c144b2;
+}
+
+@media (max-width: 600px) {
+  .footer-links,
+  .footer-social {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-links a,
+  .footer-social a {
+    margin: 5px 0;
+  }
+}
+
+
+#contact {
+  padding: 0px;
+  margin-top: -350px;
+  margin-left: 60px;
+  padding-top: 0;
+  background-color: #f9f7f7;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  max-width: 400px;
+  height: 50%;
+}
+
+form label {
+  margin-bottom: 5px;
+  display: inline;
+  color: #555;
+}
+
+form input,
+form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+form input[type="submit"] {
+  margin: 10px;
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(247, 177, 232);
+  color: rgb(7, 7, 7);
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 3s ease;
+}
+form input[type="submit"]:hover {
+  background-color: #f73ef7fd; 
+  color: #010101;
+}
+
+h3 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #434343;
+}
+
+
+
+
+
+
+/* finaliza espacio para contacto */
+
+@media (max-width: 600px) {
+  nav ul {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+  }
+  .gallery {
+    flex-direction: row;
+    align-items: end;
+  }
+}
